@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Specifies the language of the document -->
+<head>
+    <meta charset="UTF-8"> <!-- Specifies character encoding as UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures responsiveness on mobile devices -->
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Concertopia is your ultimate destination for concerts, artist tours, and event recommendations. Stay updated with trending concerts and upcoming events."> <!-- SEO description -->
+    <meta name="keywords" content="concerts, artists,concert this month, world tours, concertopia, trending concerts, upcoming concerts, music"> <!-- SEO keywords -->
+    <meta name="author" content="Concertopia"> <!-- Specifies the author of the site -->
+    <meta name="robots" content="index, follow"> <!-- Instructs search engines to index the page and follow links -->
+    
+    <title>Concertopia</title> <!-- Title that appears in the browser tab -->
+    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Link to Font Awesome for icons -->
+    <link rel="icon" type="image/x-icon" href="ConcertopiaIcon/ConcertopiaIconCircle.png"> <!-- For ICO -->
+</head>
+<body>
+<!-- Navigation Bar Section -->
+<div class="navbar">
+    <!-- Navbar Left -->
+    <div class="navbar-left">
+        <img src="ConcertopiaIcon/ConcertopiaIcon.png" alt="Concertopia Icon" class="navbar-logo">
+        <div class="navbar-title">CONCERTOPIA</div>
+    </div>
+
+   <!-- Hamburger Menu with Closing Button -->
+   <div class="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+    <!-- Dropdown Menu (Navigation Links) -->
+    <ul class="navbar-right">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="testimonial.html">Testimonial</a></li>
+        <li><a href="faq.html">FAQ's</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+    </ul>
+</div>
+    <!-- Featured Section -->
+    <div class="featured-slider-container"> <!-- Container for the featured slider -->
+        <div class="featured-slider-wrapper"> <!-- Wrapper for the slider -->
+            <div class="featured-slider"> <!-- Actual slider -->
+                <!-- Featured Cards -->
+                <div class="featured-card">
+                    <img src="FeaturedCard/BillieEilish.jpg" alt="Billie Eilish" class="featured-img"> <!-- Image for Billie Eilish -->
+                    <div class="featured-info"> <!-- Information section for the card -->
+                        <h3>Billie Eilish</h3> <!-- Artist name -->
+                        <p>World Tour 2024</p> <!-- Tour name -->
+                    </div>
+                </div>
+                <div class="featured-card">
+                    <img src="FeaturedCard/Travis.jpg" alt="Travis Scott" class="featured-img"> <!-- Image for Artist 2 -->
+                    <div class="featured-info">
+                        <h3>Travis Scott</h3> <!-- Artist name -->
+                        <p>World Tour 2024</p> <!-- Tour name -->
+                    </div>
+                </div>
+                <div class="featured-card">
+                    <img src="FeaturedCard/ChrisBrown.jpg" alt="Chris Brown" class="featured-img"> <!-- Image for Artist 3 -->
+                    <div class="featured-info">
+                        <h3>Chris Brown</h3> <!-- Artist name -->
+                        <p>World Tour 2025</p> <!-- Tour name -->
+                    </div>
+                </div>
+                <div class="featured-card">
+                    <img src="FeaturedCard/LewisCapaldi.jpeg" alt="Lewis Capaldi" class="featured-img"> <!-- Image for Artist 3 -->
+                    <div class="featured-info">
+                        <h3>Lewis Capaldi</h3> <!-- Artist name -->
+                        <p>World Tour 2025</p> <!-- Tour name -->
+                    </div>
+                </div>
+                <div class="featured-card">
+                    <img src="FeaturedCard/SZA.jpg" alt="SZA" class="featured-img"> <!-- Image for Artist 3 -->
+                    <div class="featured-info">
+                        <h3>SZA</h3> <!-- Artist name -->
+                        <p>World Tour 2025</p> <!-- Tour name -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Featured Dots for navigation -->
+        <div class="featured-dots">
+            <span class="featured-dot active" onclick="goToFeaturedSlide(0)"></span> <!-- Navigation dot 1 -->
+            <span class="featured-dot" onclick="goToFeaturedSlide(1)"></span> <!-- Navigation dot 2 -->
+            <span class="featured-dot" onclick="goToFeaturedSlide(2)"></span> <!-- Navigation dot 3 -->
+            <span class="featured-dot" onclick="goToFeaturedSlide(3)"></span> <!-- Navigation dot 4 -->
+            <span class="featured-dot" onclick="goToFeaturedSlide(4)"></span> <!-- Navigation dot 5 -->
+        </div>
+    </div><br><br><hr><hr><hr><br><br>
+    
+
+    <!-- Trending Section -->
+    <div class="header-container">
+        <h2 class="trending-section">TRENDING</h2> <!-- Section header for trending content -->
+    </div>
+    <div class="box-slider-container" id="trending"> <!-- Container for the trending slider -->
+        <div class="box-slider-wrapper"> <!-- Wrapper for the slider -->
+            <div class="box-slider"> <!-- Actual slider -->
+               
+                   <!-- Trending Boxes -->
+                <a href="ArtistInfoPage/Ariana Grande/Ariana.html" class="box-link"> <!-- Link to artist info page -->
+                    <div class="box">
+                        <img src="Trending/AriannaGrande.jpg" alt="Arianna Grande" class="box-img"> <!-- Image for trending item 1 -->
+                        <img src="Trending/STAR/bituin.png" alt="Trending Star" class="star-icon"> <!-- Star icon for trending -->
+                        <h3>Ariana Grande</h3> <!-- Title for trending box -->
+                        <p>December 19, 2024</p> <!-- Description for trending box -->
+                    </div>
+                </a>
+                <a href="ArtistInfoPage/Taylor Swift/taylor.html" class="box-link"> <!-- Link to artist info page -->
+                <div class="box">
+                    <img src="Trending/TaylorSwift.jpg" alt="Taylor Swift" class="box-img"> <!-- Image for trending item 2 -->
+                    <img src="Trending/STAR/bituin.png" alt="Trending Star" class="star-icon"> <!-- Star icon for trending -->
+                    <h3>Taylor Switft</h3> <!-- Title for trending box -->
+                    <p>March 28, 2025</p> <!-- Description for trending box -->
+                </div>
+                </a>
+                <a href="ArtistInfoPage/The Weekend/the.html" class="box-link"> <!-- Link to artist info page -->
+                <div class="box">
+                    <img src="Trending/TheWeekend.jpg" alt="The Weekend" class="box-img"> <!-- Image for trending item 3 -->
+                    <img src="Trending/STAR/bituin.png" alt="Trending Star" class="star-icon"> <!-- Star icon for trending -->
+                    <h3>The Weekend</h3> <!-- Title for trending box -->
+                    <p>February 6, 2025</p> <!-- Description for trending box -->
+                </div>
+                </a>
+                <a href="ArtistInfoPage/Bruno Mars/Bruno.html" class="box-link"> <!-- Link to artist info page -->
+                <div class="box">
+                    <img src="Trending/BrunoMars.jpg" alt="Bruno Mars" class="box-img"> <!-- Image for trending item 4 -->
+                    <img src="Trending/STAR/bituin.png" alt="Trending Star" class="star-icon"> <!-- Star icon for trending -->
+                    <h3>Bruno Mars</h3> <!-- Title for trending box -->
+                    <p>May 15, 2025</p> <!-- Description for trending box -->
+                </div>
+                </a>
+                <a href="ArtistInfoPage/Olivia Rodrigo/olivia.html" class="box-link"> <!-- Link to artist info page -->
+                <div class="box">
+                    <img src="Trending/Olivia.jpg" alt="Olivia" class="box-img"> <!-- Image for trending item 5 -->
+                    <img src="Trending/STAR/bituin.png" alt="Trending Star" class="star-icon"> <!-- Star icon for trending -->
+                    <h3>Olivia Rodrigo</h3> <!-- Title for trending box -->
+                    <p>December 24, 2024</p> <!-- Description for trending box -->
+                </div>
+               </a>
+            </div>
+        </div>
+        <!-- Slider Navigation -->
+        <button class="prev-btn slider-btn" onclick="moveSlider('trending', -1)">&lt;</button> <!-- Previous button -->
+        <button class="next-btn slider-btn" onclick="moveSlider('trending', 1)">&gt;</button> <!-- Next button -->
+    </div><hr><hr><hr><br><br>
+
+   <!-- Concert This Month Section -->
+    <div class="header-container">
+<h2 class="section-header concert-this-month">Concert This Month</h2> <!-- Section header for concert this month -->
+    </div>
+<div class="box-slider-container" id="concert-this-month"> <!-- Container for concert this month slider -->
+    <div class="box-slider-wrapper"> <!-- Wrapper for the slider -->
+        <div class="box-slider"> <!-- Actual slider -->
+            <a href="ArtistInfoPage/ColdPlay/Coldplay.html" class="box-link"> <!-- Link to artist info page -->
+            <div class="box">
+                <img src="ConcertThisMonth/Coldplay.jpg" alt="Coldpaly" class="box-img"> <!-- Image for concert 1 -->
+                <h3>Coldpaly</h3> <!-- Concert title -->
+                <p>December 16, 2024</p> <!-- Artist or venue -->
+            </div>
+            </a>
+            <a href="ArtistInfoPage/Drake/drake.html" class="box-link"> <!-- Link to artist info page -->
+            <div class="box">
+                <img src="ConcertThisMonth/Drake.jpg" alt="Drake" class="box-img"> <!-- Image for concert 2 -->
+                <h3>Drake</h3> <!-- Concert title -->
+                <p>December 04, 2024</p> <!-- Artist or venue -->
+            </div>
+            </a>
+            <a href="ArtistInfoPage/Doja Cat/dojacat.html" class="box-link"> <!-- Link to artist info page -->
+            <div class="box">
+                <img src="ConcertThisMonth/DojaCat.jpg" alt="Doja Cat" class="box-img"> <!-- Image for concert 3 -->
+                <h3>Doja Cat</h3> <!-- Concert title -->
+                <p>December 12, 2024</p> <!-- Artist or venue -->
+            </div>
+            </a>
+            <a href="ArtistInfoPage/Ariana Grande/Ariana.html" class="box-link"> <!-- Link to artist info page -->
+            <div class="box">
+                <img src="ConcertThisMonth/AriannaGrande.jpg" alt="Ariana Grande" class="box-img"> <!-- Image for concert 3 -->
+                <h3>Ariana Grande</h3> <!-- Concert title -->
+                <p>December 19, 2024</p> <!-- Artist or venue -->
+            </div>
+            </a>
+            <a href="ArtistInfoPage/Olivia Rodrigo/olivia.html" class="box-link"> <!-- Link to artist info page -->
+            <div class="box">
+                <img src="images/ConcertThisMonth/Olivia.jpg" alt="Olivia" class="box-img"> <!-- Image for concert 3 -->
+                <h3>Olivia Rodrigo</h3> <!-- Concert title -->
+                <p>December 24, 2024</p> <!-- Artist or venue -->
+            </div>
+            </a>
+        </div>
+    </div>
+    <!-- Slider Navigation -->
+    <button class="prev-btn slider-btn" onclick="moveSlider('concert-this-month', -1)">&lt;</button> <!-- Previous button -->
+    <button class="next-btn slider-btn" onclick="moveSlider('concert-this-month', 1)">&gt;</button> <!-- Next button -->
+</div><hr><hr><hr><br><br>
+
+    <!-- Upcoming Concert Section -->
+    <div class="header-container">
+    <h2 class="section-header upcoming-concert">Upcoming Concert</h2> <!-- Section header for upcoming concert -->
+    </div>
+    <div class="box-slider-container" id="upcoming-concert"> <!-- Container for the upcoming concerts slider -->
+        <div class="box-slider-wrapper"> <!-- Wrapper for the slider -->
+            <div class="box-slider"> <!-- Actual slider -->
+                <a href="ArtistInfoPage/Jame Arthur/james.html" class="box-link"> <!-- Link to artist info page -->
+                <div class="box">
+                    <img src="UpcomingConcert/JamesArthur.jpg" alt="James Arthur" class="box-img"> <!-- Image for concert 1 -->
+                <h3>James Arthur</h3> <!-- Concert title -->
+                <p>March 2025</p> <!-- Artist or venue -->
+            </div>
+                </a>
+                <a href="ArtistInfoPage/Post Maloine/post.html" class="box-link"> <!-- Link to artist info page -->
+            <div class="box">
+                <img src="UpcomingConcert/PostMalone.jpg" alt="Post Malone" class="box-img"> <!-- Image for concert 2 -->
+                <h3>Post Malone</h3> <!-- Concert title -->
+                <p>June 2025</p> <!-- Artist or venue -->
+            </div>
+                </a>
+                <a href="ArtistInfoPage/Rex Orange Country/rex.html" class="box-link"> <!-- Link to artist info page -->
+            <div class="box">
+                <img src="UpcomingConcert/RexOrangeCountry.jpg" alt="Rex Orange Country" class="box-img"> <!-- Image for concert 3 -->
+                <h3>Rex Orange Country</h3> <!-- Concert title -->
+                <p>May 2025</p> <!-- Artist or venue -->
+            </div>
+            </a>
+            <a href="ArtistInfoPage/The Weekend/the.html" class="box-link"> <!-- Link to artist info page -->
+            <div class="box">
+                <img src="UpcomingConcert/TheWeekend.jpg" alt="The Weekend" class="box-img"> <!-- Image for concert 3 -->
+                <h3>The Weekend</h3> <!-- Concert title -->
+                <p>February 2025</p> <!-- Artist or venue -->
+            </div>
+            </a>
+            <a href="ArtistInfoPage/Kendrik Lamar/ken.html" class="box-link"> <!-- Link to artist info page -->
+            <div class="box">
+                <img src="UpcomingConcert/KendrickLamar.jpg" alt="Kendrick Lamar" class="box-img"> <!-- Image for concert 3 -->
+                <h3>Kendrick Lamar</h3> <!-- Concert title -->
+                <p>March 2025</p> <!-- Artist or venue -->
+            </div>
+            </a>
+            </div>
+        </div>
+        <!-- Slider Navigation -->
+        <button class="prev-btn slider-btn" onclick="moveSlider('upcoming-concert', -1)">&lt;</button> <!-- Previous button -->
+        <button class="next-btn slider-btn" onclick="moveSlider('upcoming-concert', 1)">&gt;</button> <!-- Next button -->
+    </div>
+
+    <footer>
+        <div class="footer-container">
+          <div class="footer-left">
+            <p>© 2024 Concertopia : All rights reserved.</p>
+          </div>
+          <div class="footer-right">
+            <!-- Facebook -->
+            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <!-- Twitter -->
+            <a href="https://www.twitter.com" target="_blank" aria-label="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <!-- Instagram -->
+            <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </footer>
+      
+<script src="script.js"></script>
+</body>
+</html>

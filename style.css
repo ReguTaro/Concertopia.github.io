@@ -1,0 +1,1209 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to left, #b0b0b0, #dbdbdb);
+}
+
+
+
+/* Full-screen class for specific elements */
+.fullscreen-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.fullscreen-container .background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.fullscreen-container .loading-overlay {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    opacity: 1;
+    transition: opacity 1s ease-out;
+}
+
+.fullscreen-container .spinner {
+    width: 80px;
+    height: 80px;
+    border: 8px solid rgba(255, 255, 255, 0.3);
+    border-top: 8px solid #fff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Spinner keyframes */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+ /* General Navbar Styles */
+.navbar {
+        display: flex;
+        top: 0;
+        width: 100%;
+        background: linear-gradient(to left, #212020, #e6e6e6);
+        color: white;
+        padding: 10px 20px;
+        z-index: 1000;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-left {
+        display: flex;
+        align-items: center;
+}
+
+.navbar-logo {
+        width: 55px;
+        height: 50px;
+        margin-right: 10px;
+        border-radius: 50%;
+}
+
+.navbar-title {
+        color: rgb(255, 255, 255);
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        text-shadow: 2px 2px 3px black;
+}
+
+
+
+   /* Hamburger Menu */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1001;
+    position: relative;
+    width: 30px;
+    height: 40px;
+}
+
+/* Hamburger Lines */
+.hamburger span {
+    background-color: white;
+    height: 3px;
+    width: 100%;
+    margin: 3px 0;
+    border-radius: 2px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Active State for "X" - Top Line */
+.hamburger.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+/* Active State for "X" - Middle Line */
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+/* Active State for "X" - Bottom Line */
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+
+
+/* Navigation Links (Hidden Dropdown by Default) */
+.navbar-right {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    background-color: #4f4f4f;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    padding: 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 200px;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transform-origin: top;
+    transition: max-height 0.5s ease, opacity 0.3s ease;
+    z-index: 1000;
+}
+
+/* Active State (Dropdown Visible) */
+.navbar-right.active {
+    max-height: 450px;
+    opacity: 1;
+    padding: 10px;
+}
+
+/* List Items */
+.navbar-right li {
+    margin: 10px 0;
+}
+
+/* Links Style */
+.navbar-right a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Hover Effect for Links */
+.navbar-right a:hover {
+    background-color: #3a3a3a;
+    color: #151514;
+    transform: scale(1.05);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.services-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    padding-top: 75px;
+}
+
+.Statement {
+    text-align: center;
+    margin: 3px 0;
+    font-size: 40px; /* Increased text size */
+    font-weight: bold; /* Optional: Make text bold */
+    letter-spacing: 2px; /* Add text spacing */
+    line-height: 1.5; /* Adjust line height for better readability */
+}
+.State {
+    text-align: center;
+    margin: 3px 0;
+    font-size: 20px; /* Increased text size */
+    font-weight: bold; /* Optional: Make text bold */
+    letter-spacing: 2px; /* Add text spacing */
+    line-height: 1.5; /* Adjust line height for better readability */
+}
+
+.header3{
+    text-align: center;
+    margin: 3px 0;
+    font-size: 40px; /* Increased text size */
+    font-weight: bold; /* Optional: Make text bold */
+    letter-spacing: 2px; /* Add text spacing */
+    line-height: 1.5; /* Adjust line height for better readability */
+}
+main.pricing-table-container {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 15px;
+    width: 100%;
+    max-width: 1400px;
+    box-sizing: border-box;
+    align-items: center;
+    align-self: center;
+}
+
+.pricing-table {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    width: 380px;
+    text-align: center;
+    color: #333;
+    font-size: 20px; /* Increase default text size */
+    letter-spacing: 1.5px; /* Add letter spacing */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.pricing-table:hover {
+    background-color: #333;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.price {
+    font-size: 28px; /* Increase price size */
+    font-weight: bold;
+    margin: 10px 0;
+    letter-spacing: 1.8px; /* Add spacing to the price text */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+    font-size: 18px; /* Larger font size for list items */
+    letter-spacing: 1px; /* Add spacing to list items */
+}
+
+ul li {
+    margin: 5px 0;
+}
+
+button {
+    background-color: green;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 18px; /* Increase button text size */
+    letter-spacing: 1px; /* Add spacing to button text */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: rgb(58, 112, 58);
+    color: #fff;
+}
+
+    /* Gallery Styles */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap:25px; 
+    padding: 20px;
+    justify-items: center; 
+    align-items: center; 
+    padding-top: 80px;
+  }
+  
+  /* Styling for each image/GIF */
+  .image-gallery img, .image-gallery gif {
+    width: 500px;
+    height: auto; 
+    max-width: 300px; 
+    border-radius: 20px; 
+    object-fit: cover; 
+    transition: transform 0.3s, box-shadow 0.3s; 
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 1.5);
+  }
+  
+  /* Hover effect for images/GIFs */
+  .image-gallery img:hover, .image-gallery gif:hover {
+    transform: scale(1.05); /* Zoom-in effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 1.2);
+  }
+  
+
+
+  /* Testimonial Container */
+.testimonial-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    margin: 0 auto;
+    height: 91vh;
+    padding: 20px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    padding-top: 80px;
+}
+
+.testimonial-item {
+    position: relative;         
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 15px;
+    border: 2px solid #ccc;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.testimonial-date {
+    position: absolute;          
+    bottom: 10px;               
+    right: 10px;               
+    font-size: 12px;             
+    color: #555;                
+    font-style: italic;         
+}
+.testimonial-item:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.02);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.testimonial-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    flex: 1;
+}
+
+.testimonial-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 30px;
+    transition: box-shadow 0.3s ease;
+
+}
+
+.testimonial-text {
+    font-size: 20px;
+    line-height: 1.7;
+    color: #333333;
+    margin-bottom: 15px;
+}
+
+.testimonial-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 28px;
+    color: goldenrod;
+    display: flex;
+    align-items: center;
+}
+
+.testimonial-icon i {
+    margin-left: 2px;
+}
+
+
+
+/* About us */
+  .about-us h2 {
+    text-align: center;
+    font-size: 40px;
+}
+
+.about-us p {
+    text-align: center;
+    font-size: 20px;
+}
+
+
+
+/* FAQ Container */
+.faq-container {
+    display: flex;             
+    flex-direction: column;    
+    max-width: 900px;          
+    margin: 0 auto;           
+    height: 93vh;              
+    padding: 20px;            
+    overflow-y: scroll;         
+    overflow-x: hidden;       
+    padding-top: 80px;
+
+    /* Hide the scrollbar visually */
+    scrollbar-width: none;    
+}
+
+.faq-container::-webkit-scrollbar {
+    width: 0;                   /* Set the scrollbar width to 0 to hide it */
+}
+
+/* FAQ Item */
+.faq-item {
+    position: relative;          /* Allow absolute positioning of icons */
+    margin-bottom: 20px;         /* Space between items */
+    padding: 20px;               /* Padding inside each FAQ item */
+    border-radius: 15px;         /* Round the corners */
+    display: flex;               
+    flex-direction: column;      /* Stack content inside each FAQ item */
+    background-color: #f4f4f4;   /* Slightly lighter background */
+    border: 2px solid #ccc;
+    flex-grow: 2;                /* Allow FAQ items to grow */
+    justify-content: space-between;
+    transition: background-color 0.3s ease, transform 0.2s ease; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* FAQ Item Hover */
+.faq-item:hover {
+    background-color: #e0e0e0;  /* Lighter background on hover */
+    transform: scale(1.02);       /* Slight zoom effect */
+}
+
+.faq-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align items to the left */
+    width: 100%;
+    flex: 1;                     /* Make the header flexible to take available space */
+}
+
+/* FAQ Number */
+.faq-number {
+    width: 120px;               /* Larger width for the circle */
+    height: 120px;              /* Larger height for the circle */
+    border-radius: 50%;         /* Make the number area circular */
+    display: flex;              /* Center-align the number inside the circle */
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;            /* Larger font size for the number */
+    font-weight: bold;          /* Make the number bold */
+    margin-right: 30px;         /* Space between number and text */
+}
+
+/* FAQ Text */
+.faq-text {
+    font-size: 20px;             /* Larger font size for the FAQ text */
+    line-height: 1.7;            /* Increase line height for readability */
+    color: #333;
+    margin-bottom: 15px;         /* Space between text and icon */
+}
+
+/* FAQ Icon (Question Mark in Circle) */
+.faq-icon {
+    position: absolute;          /* Fix the icon to the upper-right */
+    top: 10px;                   /* Place the icon 10px from the top */
+    right: 10px;                 /* Place the icon 10px from the right edge */
+    font-size: 28px;             /* Adjust the size of the icon */
+    color: #555;                 /* Neutral color for the question mark */
+    display: flex;               /* Display icon inline */
+    align-items: center;         /* Center icon vertically */
+}
+
+.faq-icon i {
+    font-family: "Font Awesome 5 Free"; /* Ensure Font Awesome is used */
+    content: "\f059";                   /* Unicode for question mark inside a circle */
+    font-weight: 900;                   /* Bold icon */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .faq-container {
+        padding: 15px;            /* Reduced padding for tablets */
+    }
+
+    .faq-item {
+        padding: 15px;            /* Adjust padding */
+    }
+
+    .faq-number {
+        width: 80px;              /* Smaller width for the circle */
+        height: 80px;             /* Smaller height for the circle */
+        margin-right: 15px;       /* Reduced space between image and text */
+    }
+
+    .faq-text {
+        font-size: 20px;          /* Smaller text */
+    }
+
+    .faq-icon {
+        font-size: 24px;          /* Smaller icon */
+        top: 5px;                 /* Slightly adjust the top position */
+        right: 5px;               /* Adjust the right position */
+    }
+}
+
+@media (max-width: 480px) {
+    .faq-container {
+        padding: 10px;            /* Even smaller padding for mobile */
+    }
+
+    .faq-item {
+        padding: 10px;            /* Smaller padding for mobile */
+    }
+
+    .faq-number {
+        width: 60px;              /* Smaller width for the circle */
+        height: 60px;             /* Smaller height for the circle */
+        margin-right: 10px;       /* Further reduced space */
+    }
+
+    .faq-text {
+        font-size: 18px;          /* Smaller text */
+    }
+
+    .faq-icon {
+        font-size: 20px;          /* Smaller icon */
+        top: 5px;                 /* Even closer to the top */
+        right: 5px;               /* Further adjusted position */
+    }
+}
+
+.team-container {
+    display: grid;                             /* Use grid layout */
+    grid-template-columns: repeat(3, 1fr);     /* 3 equal-width columns */
+    grid-gap: 40px;                            /* Adds space between the grid items */
+    margin: 20px auto;                         /* Centers the container */
+    max-width: 1200px;                         /* Set max width */
+    padding: 50px;                             /* Optional: Add padding */
+    padding-left: 120px;
+}
+
+/* Styling for each profile */
+.profile {
+    display: flex;                             /* Use flexbox for horizontal layout */
+    flex-direction: column;                    /* Stack content vertically */
+    align-items: center;                       /* Center the content */
+    justify-content: center;                   /* Center content vertically */
+    text-align: center;                        /* Align text to the center */
+    width: 200px;                              /* Set a fixed width */
+    height: 200px;                             /* Make height equal to width */
+    padding: 20px;                             /* Padding inside the box */
+    border: 1px solid #ddd;                    /* Optional: Add border around each profile */
+    border-radius: 20px;                       /* Slightly rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Shadow effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 250px;
+    height: 250px;
+   
+}
+
+.profile:hover {
+    background: #f0f0f0;                       /* Optional: Change background color on hover */
+    transform: scale(1.1);                     /* Slightly enlarge on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+}
+
+/* Profile image */
+.profile-img img {
+    width: 120px;                              /* Set fixed width for the image */
+    height: 120px;                             /* Set fixed height for the image */
+    object-fit: cover;                         /* Ensures the image covers the area */
+    border-radius: 50%;                        /* Make the image circular */
+    margin-bottom: 10px;                       /* Space below the image */
+}
+
+/* Styling for the profile details */
+.profile-details {
+    font-size: 16px;                           /* Adjust font size */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .team-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 profiles per row for tablets */
+    }
+    .profile {
+        width: 180px;                          /* Slightly smaller size */
+        height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .team-container {
+        grid-template-columns: 1fr;            /* 1 profile per row on mobile */
+    }
+    .profile {
+        width: 160px;                          /* Smaller size for mobile */
+        height: 160px;
+    }
+}
+
+  
+.contact_us{
+    text-align:center;
+}
+
+.contact_us a {
+    text-decoration: none; /* Removes the underline */
+    color: inherit;        /* Optional: keeps the default text color */
+}
+
+.contact_us a:hover {
+    color: #007BFF;  /* Change color on hover */
+}
+
+.contact_us a {
+    text-decoration: none;
+    color: #333;
+}
+   /* General styles for the header container */
+/* General styles for the header container */
+.header-container {
+    display: flex;
+    width: 100%;                  /* Take up full width */
+    align-items: center;          /* Vertically center-align items */
+    font-weight: bold;  
+    text-transform: uppercase;    /* Makes the text uppercase */
+    letter-spacing: 2px;          /* Adds spacing between letters */
+    color: #080808;               /* Text color */
+    gap: 20px;                    /* Adds space between headers */
+}
+
+/* Generic styles for all section headers */
+.section-header {
+    margin: 0;
+    padding-left: 20px;           /* Default left padding for headers */
+    flex: none;                   /* Prevent flex stretching */
+    text-align: left;             /* Left-align by default */
+}
+
+/* Specific styles for 'Trending' header */
+.trending-section {
+    margin: 0 auto;               /* Center this specific header */
+    padding: 0;                   /* Remove padding for centered alignment */
+    text-align: center;           /* Center-align the text */
+    font-size: 2.2rem;            /* Adjust font size */
+    font-weight: bold;            /* Bold for emphasis */
+    color: inherit;               /* Use inherited color */
+    flex: 1;                      /* Let it occupy full width to center properly */
+}
+
+/* Specific styles for 'Concert This Month' and 'Upcoming Concert' headers */
+.concert-this-month,
+.upcoming-concert {
+    font-size: 2.2rem;            /* Adjust font size */
+    font-weight: inherit;         /* Inherit font weight */
+    color: inherit;               /* Inherit color */
+    padding-left: 40px;           /* Maintain left padding */
+    text-align: left;             /* Explicitly align text to the left */
+    flex: none;                   /* Prevent these headers from stretching */
+}
+
+
+@media screen and (max-width: 768px) {
+    .header-container {
+        flex-direction: column;    /* Stack items vertically */
+        font-size: 0.9rem;         /* Adjust font size */
+        gap: 10px;                 /* Reduce spacing */
+    }
+
+    .trending-section {
+        text-align: center;        /* Center-align remains the same */
+        flex: 0 0 auto;            /* Reset flex behavior */
+        margin-bottom: 10px;       /* Add spacing below */
+    }
+
+    .header-container .upcoming-concert-section,
+    .header-container .concert-this-month-section {
+        padding-left: 10px;        /* Adjust padding */
+        text-align: left;          /* Retain alignment */
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .header-container {
+        font-size: 0.8rem;         /* Smaller font size for narrow screens */
+        gap: 5px;                  /* Minimal spacing */
+    }
+
+    .trending-section {
+        text-align: center;        /* Keep center alignment */
+        margin-bottom: 5px;        /* Reduce spacing */
+    }
+
+    .header-container .upcoming-concert-section,
+    .header-container .concert-this-month-section {
+        padding-left: 5px;         /* Minimal padding for small devices */
+        font-size: 0.5rem;         /* Adjust font size */
+    }
+}
+
+
+
+    /* Slider Section */
+    .slider-container {
+        position: relative; /* Positions the slider container */
+        overflow: hidden; /* Hides the parts of the slider that overflow */
+        width: 100%; /* Makes the container full width */
+        height: 400px;
+        margin-top: 80px; /* Adds top margin to prevent navbar from overlapping */
+        
+    }
+
+    /* Slider */
+    .slider {
+        display: flex; /* Displays the slider items in a row */
+        transition: transform 0.5s ease-in-out; /* Adds a smooth transition when sliding */
+    }
+
+    /* Slider Buttons */
+    .slider-btn {
+        background-color: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent background */
+        color: white; /* Sets the text color to white */
+        border: none; /* Removes the border */
+        font-size: 18px; /* Sets font size for the buttons */
+        padding: 15px; /* Adds padding inside the buttons */
+        cursor: pointer; /* Changes the cursor to a pointer */
+        position: absolute; /* Positions the buttons absolutely within the slider */
+        top: 50%; /* Aligns the buttons vertically in the middle */
+        transform: translateY(-50%); /* Adjusts the buttons to be perfectly centered */
+        border-radius: 10px; /* Rounds the corners of the buttons */
+        transition: background-color 0.5s ease; /* Adds a smooth transition for background color */
+    }
+
+    .prev-btn {
+        left: 10px; /* Positions the previous button to the left */
+    }
+
+    .next-btn {
+        right: 10px; /* Positions the next button to the right */
+    }
+
+    .slider-btn:hover {
+        background-color: rgba(0, 0, 0, 0.8); /* Darkens the background color when hovered */
+    }
+
+    /* Featured Slider */
+    .featured-slider-container {
+        position: relative; /* Positions the container */
+        margin: 1px auto; /* Centers the container horizontally and adds margin */
+        max-width: 1700px; /* Sets a max-width to prevent it from becoming too wide */
+        max-height: 900px;
+        transition: background-color 0.01s ease-in-out; /* Smoothly transition the background color */
+        padding-top: 70px;
+    }
+
+    .featured-slider-wrapper {
+        overflow: hidden; /* Hides any part of the slider outside the container */
+        border: none;
+        background-color: #ffffff; /* Sets a white background color */
+    }
+
+    .featured-slider {
+        display: flex; /* Displays the featured items in a row */
+        transition: transform 0.5s ease-in-out; /* Adds a smooth transition when sliding */
+    }
+
+    .featured-link {
+        text-decoration: none; /* Removes the underline from links */
+        color: inherit; /* Inherits the color from the parent */
+        display: block; /* Makes the link fill the container */
+    }
+
+    .featured-card {
+        display: flex; /* Flexbox for aligning card contents */
+        align-items: center; /* Vertically aligns the content */
+        justify-content: space-between; /* Distributes the content evenly */
+        min-width: 100%; /* Ensures the card takes up the full width of the container */
+        padding: 20px; /* Adds padding inside the card */
+        box-sizing: border-box; /* Includes padding in the total width and height */
+        transition: background-color 0.5s ease; /* Smooth transition for background color */
+        border-radius: 8px; /* Optional: rounded corners */
+    }
+
+    .featured-img {
+        width: 40%; /* Sets the image width to 40% of the card */
+        border-radius: 10px; /* Rounds the corners of the image */
+        object-fit: cover; /* Ensures the image covers the space without distortion */
+        box-shadow: 0px 6px 10px 0px #2d2b2b;
+
+    }
+
+    .featured-info {
+        flex: 1; /* Makes the text section take up the remaining space */
+        text-align: center; /* Centers the text */
+        margin-left: 20px; /* Adds space between the image and text */
+    }
+
+    .featured-info h3 {
+        font-family: 'Fantasy', sans-serif ; /* Sets the font for the title */
+        font-size: 5.5em; /* Increases the font size for the title */
+        text-align: center; /* Centers the title */
+        text-shadow: 2px 2px 4px #000000; /* Adds a shadow with horizontal, vertical offsets, blur radius, and color */ 
+    }
+
+    .featured-info p {
+        font-size: 2.2em; /* Sets a larger font size for the paragraph */
+        text-shadow: 1px 1px 3px #000000; /* Adds a smaller shadow */
+    }
+
+    .featured-dots {
+        text-align: center; /* Centers the dots horizontally */
+        margin-top: 10px; /* Adds top margin */
+    }
+
+    .featured-dot {
+        display: inline-block; /* Makes the dots appear next to each other */
+        width: 15px; /* Sets the dot width */
+        height: 15px; /* Sets the dot height */
+        margin: 5px; /* Adds space between the dots */
+        background-color: #c4c4c4; /* Sets the default dot color */
+        border-radius: 50%; /* Makes the dots circular */
+        cursor: pointer; /* Changes the cursor to a pointer */
+        transition: background-color 0.3s ease-in-out; /* Adds a smooth transition when hovered */
+    }
+
+    .featured-dot.active,
+    .featured-dot:hover {
+        background-color: #2d2b2b; /* Changes the dot color when active or hovered */
+    }
+    @media (max-width: 768px) {
+        .featured-slider-container {
+            max-height: 300px; /* Reduced height for smaller screens */
+        }
+    }
+
+
+    /* Box Slider Section */
+    .box-slider-container .box {
+        position: relative; /* Ensures star icon is positioned relative to the box */
+        overflow: hidden; /* Hides any content that overflows */
+    }
+
+    .box-slider-container .star-icon {
+        position: absolute; /* Positions the star icon within the box */
+        top: 5px; /* Positions the icon 5px from the top */
+        left: 5px; /* Positions the icon 5px from the left */
+        width: 60px; /* Sets the width of the star icon */
+        height: auto; /* Maintains the aspect ratio of the star icon */
+        z-index: 10; /* Ensures the icon is above the content */
+    }
+
+    .box-slider-container {
+        position: relative; /* Positions the box slider container */
+        width: 90%; /* Sets the width to 90% of the screen */
+        max-width: 1400px; /* Limits the maximum width */
+        margin: 30px auto; /* Centers the container with top and bottom margins */
+        overflow: hidden; /* Hides overflow content */
+    }
+
+    .box-slider-wrapper {
+        display: flex; /* Uses flexbox for horizontal alignment */
+        transition: transform 1s ease; /* Adds smooth transition when sliding */
+    }
+
+    .box-slider {
+        display: flex; /* Uses flexbox for item alignment */
+        gap: 30px; /* Adds space between the boxes */
+        transition: transform 0.5s ease;
+        will-change: transform; /* Improves performance */
+    }
+
+    .box {
+        position: relative; /* Allows absolute positioning of elements inside the box */
+        display: flex; /* Aligns the box contents in a column */
+        flex-direction: column; /* Stacks items vertically */
+        justify-content: space-between; /* Distributes space between the elements */
+        align-items: center; /* Centers the items horizontally */
+        width: 280px; /* Sets the box width */
+        height: 320px; /* Sets the box height */
+        background-color: #fff; /* Sets a white background for the box */
+        border-radius: 10px; /* Rounds the corners of the box */
+        overflow: hidden; /* Hides any overflow content */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+        text-align: center; /* Centers the text inside the box */
+        transition: all 0.3s ease; /* Smooth transition for resizing */
+        margin: 10px;
+    }
+
+    /* Link Styling */
+    a {
+        display: block; /* Ensures the <a> tag behaves like a block-level element */
+        text-decoration: none; /* Removes default underline from links */
+        color: inherit; /* Inherits text color from parent element */
+    }
+
+    /* Star Icon */
+    .star-icon {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 30px; /* Default size of the star icon */
+        height: 30px; /* Default size of the star icon */
+    }
+
+    /* Media Query for smaller screens */
+    @media (max-width: 768px) {
+        .star-icon {
+            width: 20px; /* Smaller icon for screens smaller than 768px */
+            height: 20px; /* Smaller icon for screens smaller than 768px */
+        }
+    }
+
+    @media (max-width: 480px) {
+        .star-icon {
+            width: 15px; /* Even smaller for very small screens */
+            height: 15px; /* Even smaller for very small screens */
+        }
+    }
+
+    .box:hover {
+        transform: scale(0.95); /* Slightly shrinks the box on hover */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Increases the shadow on hover */
+    }
+
+    .box-img {
+        width: 100%; /* Makes the image span the full width of the box */
+        height: 70%; /* Makes the image take up 70% of the box height */
+        object-fit: cover; /* Ensures the image covers the area without distortion */
+        flex: 1%; /* Sets minimal flex for image */
+    }
+
+    .box h3 {
+        margin: 10px 0; /* Adds margin above and below the heading */
+        font-size: 1.2em; /* Sets the font size for the heading */
+        transition: font-size 0.3s ease;
+
+    }
+
+    .box p {
+        font-size: 1em; /* Sets the font size for the paragraph */
+        color: #888; /* Sets a lighter color for the paragraph */
+        transition: font-size 0.3s ease;
+        font-style: italic;
+    }
+    /* Mobile Adjustments (max-width: 768px) */
+    @media screen and (max-width: 768px) {
+        .box h3 {
+            font-size: 1em; /* Slightly smaller text on mobile */
+        }
+        .box p {
+            font-size: 0.9em; /* Smaller paragraph text */
+        }
+    }
+
+    /* Tablet Adjustments (max-width: 1024px) */
+    @media screen and (max-width: 1024px) {
+        .box h3 {
+            font-size: 1.1em; /* Adjusts heading size for tablets */
+        }
+        .box p {
+            font-size: 1em; /* Adjust paragraph text size */
+        }
+    }
+    .box-link {
+        text-decoration: none; /* Removes the underline */
+        display: block; /* Ensures the link fills the entire box */
+        color: inherit; /* Inherit the text color */
+        width: 100%; /* Ensures full width */
+        height: auto; /* Ensures height adjusts automatically */
+    }
+
+    .box-link .box {
+        position: relative; /* Allows absolute positioning of elements inside the box */
+        display: flex; /* Aligns the box contents in a column */
+        flex-direction: column; /* Stacks items vertically */
+        justify-content: space-between; /* Distributes space between the elements */
+        align-items: center; /* Centers the items horizontally */
+        width: 280px; /* Sets the box width */
+        height: 320px; /* Sets the box height */
+        background-color: #fff; /* Sets a white background for the box */
+        border-radius: 10px; /* Rounds the corners of the box */
+        overflow: hidden; /* Hides any overflow content */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+        text-align: center; /* Centers the text inside the box */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adds smooth transitions */
+    }
+
+    .box-link .box:hover {
+        transform: scale(0.95); /* Shrinks the box on hover */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Increases the shadow on hover */
+    }
+    /* Remove default link styling */
+    a {
+        color: inherit;            /* Inherit the color from parent element */
+        text-decoration: none;      /* Remove underline */
+        outline: none;              /* Remove focus outline */
+    }
+
+    /* Optional: If you want to remove the blue color on hover and active states as well */
+    a:hover,
+    a:focus,
+    a:active {
+        color: inherit;            /* Inherit the color from parent element */
+        text-decoration: none;      /* Ensure no underline on hover/focus */
+    }
+    /* Mobile Adjustments */
+    @media screen and (max-width: 768px) {
+        navbar {
+            flex-direction: row; /* Keep row layout */
+            justify-content: space-between; /* Space between logo/title and hamburger */
+            padding: 10px 15px; /* Reduce padding */
+        }
+
+        .navbar-left {
+            flex: 1; /* Push left content to the start */
+        }
+
+        .navbar-title {
+            font-size: 20px; /* Slightly smaller title */
+        }
+
+        .hamburger {
+            width: 25px; /* Reduce size for smaller screens */
+            height: 30px; /* Adjust height */
+        }
+
+        .hamburger span {
+            height: 2.5px; /* Thinner lines */
+        }
+
+        .navbar-right {
+            width: 100%; /* Full width dropdown */
+            right: 0; /* Align to the screen's right edge */
+            left: 0; /* Align to the screen's left edge */
+        }
+
+        .navbar-right li {
+            text-align: center; /* Center align dropdown links */
+        }
+
+        .slider-container {
+            height: auto; /* Makes the slider container's height auto */
+            margin-top: 80px; /* Adds margin to prevent navbar overlap */
+        }
+
+        .box {
+            width: 100%; /* Makes the box full width on mobile */
+            height: 150px; /* Sets a smaller height for the box */
+        }
+
+        .box-slider {
+            gap: 10px; /* Reduces the gap between the boxes */
+        }
+    }
+
+    /* For tablets and medium screens (max-width: 1024px) */
+    @media screen and (max-width: 1024px) {
+        .featured-info h3 {
+            font-size: 4em; /* Adjust title size */
+        }
+        .featured-info p {
+            font-size: 1.8em; /* Adjust paragraph size */
+        }
+        .box {
+            width: 45%; /* Two boxes per row */
+        }
+        .slider-container {
+            height: 300px; /* Reduced height for sliders */
+        }
+    }
+
+    /* For smaller mobile screens (max-width: 480px) */
+    @media screen and (max-width: 480px) {
+        .navbar-title {
+            font-size: 18px; /* Smaller navbar title */
+        }
+        .navbar-logo {
+            width: 40px; /* Adjust logo size */
+            height: 40px;
+        }
+        .hamburger {
+            width: 20px; /* Adjust hamburger menu size */
+            height: 25px;
+        }
+        .hamburger span {
+            height: 2px; /* Thinner lines */
+        }
+        .slider-container {
+            height: auto; /* Adjust slider height */
+        }
+        .featured-info h3 {
+            font-size: 3em; /* Smaller title size */
+        }
+        .featured-info p {
+            font-size: 1.5em; /* Smaller paragraph size */
+        }
+        .box {
+            width: 100%; /* Full-width boxes on small screens */
+            height: auto; /* Dynamic height */
+        }
+        .box-img {
+            height: 60%; /* Adjust image height */
+        }
+    }
+
+    /* General Improvements for all screen sizes */
+    @media screen and (max-width: 1400px) {
+        .featured-slider-container {
+            padding: 0 10px; /* Add padding for narrower screens */
+        }
+        .box-slider-wrapper {
+            gap: 15px; /* Reduce gap between boxes */
+        }
+        .navbar-right {
+            padding: 5px 0; /* Adjust dropdown padding */
+        }
+    }
+    /* Footer Styles */
+    footer {
+        background: linear-gradient(to right, #4a4a4a, #9e9e9e); /* Adjust gradient colors */
+        color: white;
+        padding: 10px 20px;
+    }
+    
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap; /* Ensures responsiveness */
+    }
+    
+    .footer-left {
+        flex: 1;
+        min-width: 200px;
+    }
+    
+    .footer-left p {
+        margin: 0;
+    }
+    
+    .footer-right {
+        display: flex;
+        gap: 15px;
+        justify-content: flex-end;
+        flex: 1;
+        min-width: 150px;
+    }
+    
+    .footer-right a {
+        color: black;
+        background-color: white;
+        padding: 10px;
+        border-radius: 50%;
+        text-decoration: none;
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .footer-right a:hover {
+        background-color: #cccccc; /* Hover effect */
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 600px) {
+        .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        }
+    
+        .footer-right {
+        justify-content: center;
+        margin-top: 10px;
+        }
+    }
